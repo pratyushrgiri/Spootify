@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #000000;
+    min-height: 100vh;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 60px 1fr 70px;
+    grid-template-areas:
+    "nav nav nav"
+    "sidebar main  playlist "
+    "musicPlayer musicPlayer musicPlayer";
+}
+nav{
+    background-color: #000000;
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+}
+#logocontainer{
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logocontainer a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#logo{
+    font-size: 40px;
+    margin: 15px;
+    
+}
+
+main{
+    background-color: #121212;
+    grid-area: main;
+}
+.contentArea{
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+}
+#sideBar{
+    background-color: #121212;
+    grid-area: sidebar;
+}
+#playlistSection{
+    background-color: #121212;
+    grid-area: playlist;
+}
+#musicPlayer{
+    background-color: #000000;
+    grid-area: musicPlayer;
+}
