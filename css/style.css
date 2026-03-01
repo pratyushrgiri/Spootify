@@ -21,6 +21,8 @@ nav{
     grid-area: nav;
     display: flex;
     flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
 }
 #logocontainer{
     width: 60px;
@@ -36,8 +38,32 @@ nav{
 
 #logo{
     font-size: 40px;
-    margin: 15px;
     
+}
+
+#homeButtonContainer{
+    
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#homeButtonContainer a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#homeButton{
+    font-size: 20px;
+}
+#brouse{
+    width: 24px;
+    height: 24px;
+    fill: #000000;
 }
 
 main{
