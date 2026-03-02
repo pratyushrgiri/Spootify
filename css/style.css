@@ -140,14 +140,126 @@ nav{
     justify-content: center;
     align-items: center;
 }
+/* main section */
 main{
     background-color: #121212;
     grid-area: main;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Section title */
+.section-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* Music grid container */
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+/* Individual music card */
+.music-card {
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.music-card:hover {
+    background-color: #282828;
+}
+
+/* Card image container */
+.card-image {
+    position: relative;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+/* Play button */
+.play-button {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #1db954;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.play-button:hover {
+    background-color: #1ed760;
+    transform: translateY(0) scale(1.5); 
+}
+
+.music-card:hover .play-button {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95),transform 0.3s ease;
+}
+
+.play-button i {
+    color: #000000;
+    font-size: 18px;
+    margin-left: 2px;
+}
+
+/* Card content */
+.card-content {
+    padding: 0;
+}
+
+.card-title {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-description {
+    color: #b3b3b3;
+    font-size: 14px;
+    line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
 }
 .contentArea{
     padding: 20px;
     margin: 5px;
     border-radius: 10px;
+
 }
 
 /* account section */
@@ -170,6 +282,9 @@ main{
     color: #ffffff;
     text-decoration: none;
 }
+#notificationIcon{
+    font-size: 20px;
+}
 #profileWrapper{
     margin-right: 20px;
     height: 40px;
@@ -185,6 +300,9 @@ main{
     color: #ffffff;
     text-decoration: none;
 }
+#profileIcon{
+    font-size: 20px;
+}
 #sideBar{
     background-color: #121212;
     grid-area: sidebar;
@@ -197,3 +315,4 @@ main{
     background-color: #000000;
     grid-area: musicPlayer;
 }
+
