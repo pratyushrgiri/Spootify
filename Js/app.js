@@ -1,6 +1,8 @@
 const audio = document.getElementById("audio");
 const playPauseButton = document.getElementById("playPauseButton");
 const progressBar = document.getElementById("progressBar");
+const volumeBar = document.getElementById("volumeBar");
+const loopButton = document.getElementById("loopButton");
 
 
 playPauseButton.addEventListener("click", function () {
@@ -26,6 +28,16 @@ progressBar.addEventListener("input", function () {
     const progress = progressBar.value;
     const duration = audio.duration;
     audio.currentTime = (progress / 100) * duration;
+});
+
+volumeBar.addEventListener("input", function () {
+    const volume = volumeBar.value; 
+    audio.volume = volume / 10;
+});
+
+loopButton.addEventListener("click", function () {
+    audio.loop = !audio.loop;
+    loopButton.innerHTML = audio.loop ? '<i class="fa-solid fa-repeat"></i>' : '<i class="fa-solid fa-repeat"></i>';
 });
 
 function formatTime(seconds) {
