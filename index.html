@@ -32,7 +32,7 @@
                 <input type="text" placeholder="Search for artists, songs, or podcasts">
                 <!-- brouse button section -->
                 <!-- didnt found the icon so putted the relivent one  -->
-                <button id="brouseButton" class="searchButtons"><i class="fa-solid fa-list" id="brouse"></i></button>
+                <a id="brouseButton" class="searchButtons"><i class="fa-solid fa-list" id="brouse"></i></a>
             </div>
         </div>
         <!-- account section  -->
@@ -76,7 +76,20 @@
         </div>
     </main>
     <!-- music player of the spootify -->
-    <div id="musicPlayer">music player</div>
+    <div id="musicPlayer">
+        <audio id="audio" src="/Resources/Apocalypse - Cigarettes After Sex.mp3"></audio> 
+        <div id="playerControlsPause">
+            <button id="prevButton"><i class="fa-solid fa-backward"></i></button>
+            <button id="playPauseButton"><i class="fa-solid fa-play"></i></button>
+            <button id="nextButton"><i class="fa-solid fa-forward"></i></button>
+            <div id="progressContainer">
+                <span id="currentTime">0:00</span>
+                <input type="range" id="progressBar" min="0" max="100" value="0">
+                <span id="duration">0:00</span>
+            </div>
+        </div>
 
+    </div>
+<script src="/Js/app.js"></script>
 </body>
 </html>
