@@ -1,3 +1,4 @@
+
 const audio = document.getElementById("audio");
 const playPauseButton = document.getElementById("playPauseButton");
 const progressBar = document.getElementById("progressBar");

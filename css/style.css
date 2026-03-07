@@ -9,8 +9,8 @@ body{
     min-height: 100vh;
     color: #fff;
     display: grid;
-    grid-template-columns: 200px 1fr 200px;
-    grid-template-rows: 60px 1fr 70px;
+    grid-template-columns: minmax(10px, 20%) minmax(30px, 1fr) minmax(10px, 20%);
+    grid-template-rows: 60px 550px 70px;
     grid-template-areas:
     "nav nav nav"
     "sidebar main  playlist "
@@ -79,12 +79,14 @@ nav{
 }
 #brouse{
     font-size: 20px;
-    padding-right: 40px;
+    /* 
+    
+    padding-top: 10px;; */
     padding-left: 15px;
-    padding-top: 10px;;
+    padding-right: 40px;
     width: 20px;
     height: 100%;
-    border-left: #000000 solid 1px;
+    border-left: #ffffff solid 1px;
     color: gray;
 }
 #brouse:hover{
@@ -108,7 +110,7 @@ nav{
     margin-left: 20px;
     /* min-width: 200px; */
     /* max-width: 400px; */
-    width: 600px;
+    width: min(500px, 80%);
     height: 40px;
     border-radius: 20px;
     background:#121212;
@@ -144,6 +146,7 @@ nav{
 main{
     background-color: #121212;
     grid-area: main;
+    overflow: hidden;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -314,5 +317,16 @@ main{
 #musicPlayer{
     background-color: #000000;
     grid-area: musicPlayer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#playerControlsPause{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
