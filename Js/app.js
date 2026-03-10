@@ -9,10 +9,10 @@ const loopButton = document.getElementById("loopButton");
 playPauseButton.addEventListener("click", function () {
     if (audio.paused) {
         audio.play();
-        playPauseButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        playPauseButton.innerHTML = '<span class="material-symbols-outlined">pause</span>';
     } else {
         audio.pause();
-        playPauseButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+        playPauseButton.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>';
     }
 });
 
